@@ -4,7 +4,7 @@ node {
     env.IMAGE = 'gfakx/gf-amazon-app'
 
     stage('Clone repository') {
-             git branch: 'main', url: 'https://github.com/gfakx/argocd-amazon-manifest.git'  
+             git branch: 'main', url: 'https://github.com/gfakx/gitops-argocd-manifest.git'
     }
 
     stage('Update GIT') {
@@ -12,7 +12,7 @@ node {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     withCredentials([usernamePassword(credentialsId: 'gf-github-jenkins-usrpwd', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         //script {def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')}
-                        //script  {def IMAGE='ooghenekaro/amazon'}
+                        //script  {def IMAGE='gfakx/gfakx-amazon-app'}
                         sh "git config user.email gfakx@outlook.com"
                         sh "git config user.name gfakx"
                         //sh "git switch master"
