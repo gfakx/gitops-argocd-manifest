@@ -23,7 +23,7 @@ spec:
     spec: # Pod spec
       containers:
       - name: amazon-container
-        image: gfakx/gf-amazon-app:9
+        image: gfakx/gf-amazon-app:1
         ports:
         - containerPort: 3000
         
