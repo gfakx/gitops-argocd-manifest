@@ -7,10 +7,10 @@ metadata:
 spec:
   # tls:
   # - hosts:
-  #   - amazon.gfakx.xyz
+  #   - amaze.gfakx.xyz
   #   secretName: letsencrypt-nginx
   rules:
-    - host: amazon.gfakx.xyz
+    - host: amaze.gfakx.xyz
       http:
         paths:
           - path: /
